@@ -73,13 +73,3 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.cursor{
-    height: 60px;
-    width: 60px;
-    position: absolute;
-    top: 60px;
-    left: 60px;
-    background-image: url('images/hammer.png');
-    background-size: 100% 100%;
-    /*transform: translate(-20%; -20%);*/
-}
