@@ -36,11 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         timeCount.innerHTML = countDown;
         countDown--;
     }, 1000);
-
+    theme.play();
     startGame = setInterval(() => {
         showMole();
     }, 600);
-    theme.play();
 });
 
 // shows mole
