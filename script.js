@@ -5,7 +5,7 @@ let startGame, startTime, countDown = 20, score = 0;
 const timeCount = document.getElementById('time-count');
 const scoreCount = document.getElementById('score-count');
 
-const theme = new Audio("theme.mp3");
+const theme = document.querySelector("theme.mp3");
 const scored = new Audio("punch.mp3");
 const missed = new Audio("woosh.mp3");
 
@@ -30,13 +30,18 @@ gameContainer.addEventListener('click', function(e){
     }
 });
 
+//audio play
+window.addEventListener("DOMContentLoaded", event => {
+  theme.volume = 0.2;
+  theme.play();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // total game time is 20 seconds
     startTime = setInterval(() => {
         timeCount.innerHTML = countDown;
         countDown--;
     }, 1000);
-    theme.play();
     startGame = setInterval(() => {
         showMole();
     }, 600);
